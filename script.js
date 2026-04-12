@@ -1,6 +1,39 @@
-const testButton = document.getElementById("testButton");
-const message = document.getElementById("message");
+const navbar = document.querySelector(".navbar");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+const revealElements = document.querySelectorAll(".reveal");
 
-testButton.addEventListener("click", function () {
-  message.textContent = "按鈕測試成功，JavaScript 運作正常。";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 30) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+navMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
+
+revealElements.forEach((element) => {
+  observer.observe(element);
 });

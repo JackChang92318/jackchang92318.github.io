@@ -1,62 +1,188 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jack</title>
+  <title>Jack Chang | Personal Website</title>
+  <meta
+    name="description"
+    content="Personal website of Jack Chang - Computer Science student, developer, and project builder."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>測試測試</h1>
-    <p>這是一個簡單的 HTML / CSS / JavaScript 範例頁面</p>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">JC</a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">關於</a></li>
-      <li><a href="#features">功能</a></li>
-      <li><a href="#test">互動測試</a></li>
-    </ul>
-  </nav>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tag">Computer Science Student / Developer</p>
+        <h1>Jack Chang</h1>
+        <p class="hero-description">
+          I build projects with code, logic, and technology.
+          Focused on programming, systems, and practical software development.
+        </p>
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>關於這個網站</h2>
-      <p>
-        這個頁面是用來測試網站版型、按鈕互動、區塊排版與基礎 JavaScript 功能，
-        很適合拿來當作開發起始模板。
-      </p>
-    </section>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#about" class="btn btn-secondary">About Me</a>
+        </div>
 
-    <section id="features" class="card">
-      <h2>網站功能</h2>
-      <div class="features">
-        <div class="feature-box">
-          <h3>簡潔設計</h3>
-          <p>乾淨的版面配置，方便後續修改。</p>
-        </div>
-        <div class="feature-box">
-          <h3>響應式排版</h3>
-          <p>支援手機與桌面瀏覽。</p>
-        </div>
-        <div class="feature-box">
-          <h3>互動按鈕</h3>
-          <p>可測試基本 JavaScript 點擊事件。</p>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
         </div>
       </div>
     </section>
 
-    <section id="test" class="card">
-      <h2>互動測試</h2>
-      <p>按一下下面的按鈕，測試 JavaScript 是否正常運作。</p>
-      <button class="btn" id="testButton">點我測試</button>
-      <div id="message"></div>
+    <section id="about" class="section reveal">
+      <div class="container">
+        <p class="section-label">01 / ABOUT</p>
+        <h2>Who I Am</h2>
+        <p class="section-text">
+          I am a computer science student interested in algorithms, software
+          development, and system-related topics. I enjoy building practical
+          projects and turning ideas into clean, structured implementations.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <p class="section-label">02 / PROJECTS</p>
+        <h2>Selected Projects</h2>
+
+        <div class="project-grid">
+          <article class="card">
+            <div class="card-top">
+              <span class="card-tag">Project 01</span>
+            </div>
+            <h3>Lossless Image Steganography</h3>
+            <p>
+              A histogram-shifting based data hiding project focused on
+              increasing embedding capacity while preserving image quality.
+            </p>
+            <div class="tech-list">
+              <span>Python</span>
+              <span>Image Processing</span>
+              <span>Algorithm</span>
+            </div>
+            <a href="#" class="card-link">Read More</a>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="card-tag">Project 02</span>
+            </div>
+            <h3>Personal Portfolio Website</h3>
+            <p>
+              A static portfolio website hosted on GitHub Pages with a clean,
+              developer-focused interface and responsive layout.
+            </p>
+            <div class="tech-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="#" class="card-link">Read More</a>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="card-tag">Project 03</span>
+            </div>
+            <h3>Algorithm Practice Collection</h3>
+            <p>
+              A set of problem-solving implementations and notes covering
+              dynamic programming, graphs, and data structures.
+            </p>
+            <div class="tech-list">
+              <span>C++</span>
+              <span>DP</span>
+              <span>Graph</span>
+            </div>
+            <a href="#" class="card-link">Read More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <p class="section-label">03 / SKILLS</p>
+        <h2>Tech Stack</h2>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>Languages</h3>
+            <ul>
+              <li>C</li>
+              <li>C++</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>Web</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Responsive Design</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>Interests</h3>
+            <ul>
+              <li>Algorithms</li>
+              <li>Operating Systems</li>
+              <li>Computer Architecture</li>
+              <li>Software Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <p class="section-label">04 / CONTACT</p>
+        <h2>Get In Touch</h2>
+        <p class="section-text">
+          Feel free to reach out for collaboration, discussion, or project opportunities.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:your_email@example.com">Email</a>
+          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 測試網站 Demo. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>© 2026 Jack Chang. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

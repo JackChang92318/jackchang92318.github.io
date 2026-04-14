@@ -398,4 +398,57 @@
 						$main._show(location.hash.substr(1), true);
 					});
 
+		const itemsPerPage = 10;
+		const projectCard = Array.from(document.querySelectorAll(".project-card"));
+		const pagination = document.getElementById("pagination");
+
+		let currentPage = 1;
+
+		function showPage(page) {
+			currentPage = page;
+
+			const start = (page - 1) * itemsPerPage;
+			const end = start + itemsPerPage;
+
+			projectCard.forEach((item, index) => {
+				if (index >= start && index < end) {
+					item.style.display = "block";
+				} else {
+					item.style.display = "none";
+				}
+			});
+
+			renderPagination();
+		}
+
+		function renderPagination() {
+			const totalPages = Math.ceil(projectCard.length / itemsPerPage);
+			pagination.innerHTML = "";
+
+			for (let i = 1; i <= totalPages; i++) {
+				const button = document.createElement("button");
+				button.textContent = i;
+				button.className = "page-button";
+
+				if (i === currentPage) {
+					button.classList.add("active");
+				}
+
+				button.addEventListener("click", () => {
+					showPage(i);
+
+					const projectsSection = document.getElementById("projects");
+					if (projectsSection) {
+						projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+					}
+				});
+
+				pagination.appendChild(button);
+			}
+		}
+
+		if (projectCard.length > 0 && pagination) {
+			showPage(1);
+		}
+
 })(jQuery);

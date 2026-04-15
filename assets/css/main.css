@@ -724,13 +724,15 @@ input, select, textarea {
 #about p {
 	font-size: 0.8rem;
 }
+
 /* Projects */
 #projects {
-	width: 100%;
-	max-width: 900px;
-	margin: 0 auto 0 20%;
-	margin-left: 0;
+	width: min(900px, calc(100% - 4rem));
+	align-self: flex-start;
+	margin-left: 10%;
+	margin-right: 0;
 }
+
 /* List */
 
 	ol {

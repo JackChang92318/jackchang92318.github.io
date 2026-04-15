@@ -734,11 +734,18 @@ input, select, textarea {
 }
 
 /* paging */
-#pagination {
-	width: min(900px, calc(100% - 4rem));
-	align-self: center;
-	margin-left: 10%;
-	margin-right: 0;
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.page-button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* List */

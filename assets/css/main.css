@@ -727,6 +727,9 @@ input, select, textarea {
 /* Projects */
 #projects {
 	margin-top: 0;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto 0 20%;
 }
 /* List */
 

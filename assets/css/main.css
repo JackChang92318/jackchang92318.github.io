@@ -725,10 +725,18 @@ input, select, textarea {
 	font-size: 0.8rem;
 }
 
-/* Projects */
+/* Projects list*/
 #projects {
 	width: min(900px, calc(100% - 4rem));
 	align-self: flex-start;
+	margin-left: 10%;
+	margin-right: 0;
+}
+
+/* paging */
+#pagination {
+	width: min(900px, calc(100% - 4rem));
+	align-self: center;
 	margin-left: 10%;
 	margin-right: 0;
 }

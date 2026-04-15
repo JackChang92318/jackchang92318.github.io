@@ -1661,3 +1661,19 @@ input, select, textarea {
 	background-position: center;
 	background-size: 100% 100%;
 }
+/* Project list */
+.project-list {
+	text-align: left;
+}
+
+.project-item {
+	text-align: left;
+	align-items: flex-start;
+}
+
+.project-item h3,
+.project-item p,
+.project-item .project-meta,
+.project-item .card-link {
+	text-align: left;
+}

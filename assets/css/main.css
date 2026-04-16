@@ -782,6 +782,13 @@ input, select, textarea {
 
 		ul li {
 			padding-left: 0.5em;
+			list-style-type: square;
+		}
+
+		ul li ul {
+			margin: 0.5em 0 0.5em 1.25em;
+			padding-left: 1em;
+			list-style-type: circle;
 		}
 
 		ul.alt {
